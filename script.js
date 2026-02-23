@@ -8,13 +8,11 @@
       const tabCount = document.getElementById("tabCount")
       let currentTab = "all"
 
-
       // DEFAULT STATUS SET
       for (let i = 0; i < cards.length; i++) {
           cards[i].dataset.status = "all"
       }
-
-      // UPDATE DASHBOARD COUNT
+      // DASHBOARD COUNT
       function updateCounts() {
           const allCards = document.querySelectorAll(".job-card")
           let interviewNum = 0
@@ -28,13 +26,11 @@
           rejectedCount.innerText = rejectedNum
       }
 
-
       // AVAILABLE JOB COUNT (RIGHT SIDE)
       function updateAvailableJobs() {
           const allJobs = document.querySelectorAll(".job-card")
           tabCount.innerText = allJobs.length + " jobs"
       }
-
 
       // FILTER TAB
       function filterCards() {
@@ -51,10 +47,8 @@
           emptyState.style.display = visible === 0 ? "block" : "none"
       }
 
-
       // TAB CLICK
       for (let i = 0; i < tabBtns.length; i++) {
-
           tabBtns[i].onclick = function() {
               for (let j = 0; j < tabBtns.length; j++) {
                   tabBtns[j].classList.remove("bg-blue-500", "text-white")
@@ -101,8 +95,7 @@
           deleteBtn.onclick = function() {
               card.remove()
               updateCounts()
-              updateAvailableJobs() // ← right side job count minus
-              filterCards()
+              updateAvailableJobs() //
           }
 
       }
