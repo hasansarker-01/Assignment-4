@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Track Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+</head>
+
+<body class="bg-gray-100 min-h-screen p-4">
+
+    <div class="max-w-6xl mx-auto">
+
+        <!-- TITLE -->
+        <h1 class="text-2xl font-bold mb-4">CareerTrack Job Application Tracker</h1>
+
+        <!-- DASHBOARD -->
+        <div class="grid md:grid-cols-3 gap-4 mb-6">
+
+            <div class="bg-white p-4 rounded shadow">
+                <p class="text-gray-500">Total</p>
+                <h2 id="totalCount" class="text-2xl font-bold">8</h2>
+            </div>
+
+            <div class="bg-white p-4 rounded shadow">
+                <p class="text-gray-500">Interview</p>
+                <h2 id="interviewCount" class="text-2xl font-bold text-green-600">0</h2>
+            </div>
+
+            <div class="bg-white p-4 rounded shadow">
+                <p class="text-gray-500">Rejected</p>
+                <h2 id="rejectedCount" class="text-2xl font-bold text-red-600">0</h2>
+            </div>
+
+        </div>
+
+        <!-- HEADER -->
+        <div class="flex justify-between items-center mb-3">
+            <h2 class="text-xl font-semibold">Available Jobs</h2>
+            <span id="tabCount" class="text-gray-500">8 jobs</span>
+        </div>
+
+        <!-- FILTER -->
+        <div class="flex gap-3 mb-4">
+            <button class="tabBtn bg-blue-500 text-white px-3 py-1 rounded">All</button>
+            <button class="tabBtn bg-gray-200 active:bg-blue-700 active:text-white px-3 py-1 rounded">Interview</button>
+            <button class="tabBtn bg-gray-200 px-3 py-1 rounded">Rejected</button>
+        </div>
+
+        <!-- JOB CONTAINER -->
+        <div id="jobContainer" class="space-y-4">
+
+            <!-- CARD 1 -->
+            <div class="job-card bg-white  relative p-4 rounded shadow">
+                <div class="flex ">
+                    <div class="text-left relative space-y-5">
+                        <h3 class="font-semibold">Mobile First Corp</h3>
+                        <p class="text-sm text-gray-600">React Native Developer</p>
+                        <p class="text-sm">Remote • Full Time • $130,000-$175,000</p>
+                        <p class=" text-xs text-black font-semibold mt-1 bg-gray-200 px-2 py-1 rounded inline-block">NOT APPLIED</p>
+                        <p class="text-sm mt-1">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide..</p>
+
+                    </div>
+
+                </div>
+                <div class="mt-3 flex gap-2">
+                    <button class="interview  border border-green-500 text-green-500 font-semibold px-3 py-1 rounded text-sm">Interview</button>
+                    <button class="reject border border-red-500 text-red-500 font-semibold px-3 py-1 rounded text-sm">Rejected</button>
+                </div>
+                <button class="delete text-red-500 absolute top-6 right-6 text-2xl "><i class="fa-regular fa-trash-can"></i></button>
+            </div>
+
+
+
+
+
+            <!-- CARD 2 -->
+            <div class="job-card bg-white  relative p-4 rounded shadow">
+                <div class="flex ">
+                    <div class="text-left space-y-5">
+                        <h3 class="font-semibold">WebFlow Agency</h3>
+                        <p class="text-sm text-gray-600">Web Designer & Devoloper</p>
+                        <p class="text-sm">Los Angeles, CA • Part-Time • $80,000-$120,000</p>
+                        <p class=" text-xs text-black font-semibold mt-1 bg-gray-200 px-2 py-1 rounded inline-block">NOT APPLIED</p>
+                        <p class="text-sm mt-1">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends..</p>
+
+                    </div>
+
+                </div>
+                <div class="mt-3 flex gap-2">
+                    <button class="interview  border border-green-500 text-green-500 font-semibold px-3 py-1 rounded text-sm">Interview</button>
+                    <button class="reject border border-red-500 text-red-500 font-semibold px-3 py-1 rounded text-sm">Rejected</button>
+                </div>
+
+                <button class="delete text-red-500 absolute top-6 right-6 text-2xl "><i class="fa-regular fa-trash-can"></i></button>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="job-card bg-white  relative p-4 rounded shadow">
+                <div class="flex ">
+                    <div class="text-left space-y-5">
+                        <h3 class="font-semibold">DataViz Solutions</h3>
+                        <p class="text-sm text-gray-600">Data Visualization Specialist</p>
+                        <p class="text-sm">Boston,MA • Full-time • $125,000 - $175,000</p>
+                        <p class=" text-xs text-black font-semibold mt-1 bg-gray-200 px-2 py-1 rounded inline-block">NOT APPLIED</p>
+                        <p class="text-sm mt-1">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking. .
+                        </p>
+
+                    </div>
+
+                </div>
+                <div class="mt-3 flex gap-2">
+                    <button class="interview  border border-green-500 text-green-500 font-semibold px-3 py-1 rounded text-sm">Interview</button>
+                    <button class="reject border border-red-500 text-red-500 font-semibold px-3 py-1 rounded text-sm">Rejected</button>
+                </div>
+                <button class="delete text-red-500 absolute top-6 right-6 text-2xl "><i class="fa-regular fa-trash-can"></i></button>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="job-card bg-white  relative p-4 rounded shadow">
+                <div class="flex ">
+
+
+                    <div class="text-left space-y-5">
+                        <h3 class="font-semibold">CloudFirst Inc</h3>
+                        <p class="text-sm text-gray-600">Backend Developer</p>
+                        <p class="text-sm">Seattle, WA • Full-time • $140,000-$190,000</p>
+                        <p class=" text-xs text-black font-semibold mt-1 bg-gray-200 px-2 py-1 rounded inline-block">NOT APPLIED</p>
+                        <p class="text-sm mt-1">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
+
+                    </div>
+
+                </div>
+                <div class="mt-3 flex gap-2">
+                    <button class="interview  border border-green-500 text-green-500 font-semibold px-3 py-1 rounded text-sm">Interview</button>
+                    <button class="reject border border-red-500 text-red-500 font-semibold px-3 py-1 rounded text-sm">Rejected</button>
+                </div>
+                <button class="delete text-red-500 absolute top-6 right-6 text-2xl "><i class="fa-regular fa-trash-can"></i></button>
+            </div>
+
+            <!-- CARD 5 -->
+            <div class="job-card bg-white  relative p-4 rounded shadow">
+                <div class="flex justify-between">
+                    <div class="text-left space-y-5">
+                        <h3 class="font-semibold">Innovate Labs</h3>
+                        <p class="text-sm text-gray-600">UI/UX Designer</p>
+                        <p class="text-sm">Austin, TX • Full-time • $110,000-$150,000</p>
+                        <p class=" text-xs text-black font-semibold mt-1 bg-gray-200 px-2 py-1 rounded inline-block">NOT APPLIED</p>
+                        <p class="text-sm mt-1">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
+
+                    </div>
+
+                </div>
+                <div class="mt-3 flex gap-2">
+                    <button class="interview  border border-green-500 text-green-500 font-semibold px-3 py-1 rounded text-sm">Interview</button>
+                    <button class="reject border border-red-500 text-red-500 font-semibold px-3 py-1 rounded text-sm">Rejected</button>
+                </div>
+                <button class="delete text-red-500 absolute top-6 right-6 text-2xl "><i class="fa-regular fa-trash-can"></i></button>
+            </div>
+
+            <!-- CARD 6 -->
+            <div class="job-card bg-white  relative p-4 rounded shadow">
+                <div class="flex justify-between">
+                    <div class="text-left space-y-5">
+                        <h3 class="font-semibold">MegaCorp Solutions</h3>
+                        <p class="text-sm text-gray-600">JavaScript Devoloper</p>
+                        <p class="text-sm">New York, NY • Full-time • $130,000-$170,000</p>
+                        <p class=" text-xs text-black font-semibold mt-1 bg-gray-200 px-2 py-1 rounded inline-block">NOT APPLIED</p>
+                        <p class="text-sm mt-1">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
+
+                    </div>
+
+                </div>
+                <div class="mt-3 flex gap-2">
+                    <button class="interview  border border-green-500 text-green-500 font-semibold px-3 py-1 rounded text-sm">Interview</button>
+                    <button class="reject border border-red-500 text-red-500 font-semibold px-3 py-1 rounded text-sm">Rejected</button>
+                </div>
+                <button class="delete text-red-500 absolute top-6 right-6 text-2xl "><i class="fa-regular fa-trash-can"></i></button>
+            </div>
+
+            <!-- CARD 7 -->
+            <div class="job-card bg-white  relative p-4 rounded shadow">
+                <div class="flex ">
+                    <div class="text-left space-y-5">
+                        <h3 class="font-semibold">StartXYZ</h3>
+                        <p class="text-sm text-gray-600">Full Stack Engineer</p>
+                        <p class="text-sm">Remote • Full-time • $120,000-$160,000</p>
+                        <p class=" text-xs text-black font-semibold mt-1 bg-gray-200 px-2 py-1 rounded inline-block">NOT APPLIED</p>
+                        <p class="text-sm mt-1">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
+
+                    </div>
+
+                </div>
+                <div class="mt-3 flex gap-2">
+                    <button class="interview  border border-green-500 text-green-500 font-semibold px-3 py-1 rounded text-sm">Interview</button>
+                    <button class="reject border border-red-500 text-red-500 font-semibold px-3 py-1 rounded text-sm">Rejected</button>
+                </div>
+                <button class="delete text-red-500 absolute top-6 right-6 text-2xl "><i class="fa-regular fa-trash-can"></i></button>
+            </div>
+
+            <!-- CARD 8 -->
+            <div class="job-card bg-white  relative p-4 rounded shadow">
+                <div class="flex justify-between">
+                    <div class="text-left space-y-5">
+                        <h3 class="font-semibold">TechCorp Industris</h3>
+                        <p class="text-sm text-gray-600">Senior Forntend Developer</p>
+                        <p class="text-sm">San Francisco, CA • Full-time • $130,000-$175,000</p>
+                        <p class=" text-xs text-black font-semibold mt-1 bg-gray-200 px-2 py-1 rounded inline-block">NOT APPLIED</p>
+                        <p class="text-sm mt-1">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
+
+                    </div>
+
+                </div>
+                <div class="mt-3 flex gap-2">
+                    <button class="interview border border-green-500 text-green-500 font-semibold px-3 py-1 rounded text-sm">Interview</button>
+                    <button class="reject border border-red-500 text-red-500 font-semibold px-3 py-1 rounded text-sm">Rejected</button>
+                </div>
+                <button class="delete text-red-500 absolute top-6 right-6 text-2xl "><i class="fa-regular fa-trash-can"></i></button>
+            </div>
+
+
+        </div>
+
+        <!-- EMPTY -->
+        <div id="emptyState" class="hidden text-center bg-white p-10 rounded shadow mt-4">
+            <div class="text-5xl mb-2 text-2xl">📄</div>
+            <h3 class="font-semibold">No jobs available</h3>
+            <p class="text-gray-500 text-sm">There is no job in this section</p>
+        </div>
+
+    </div>
+    <script>
+        // SELECT ELEMENTS
+        const cards = document.querySelectorAll(".job-card")
+        const tabBtns = document.querySelectorAll(".tabBtn")
+        const emptyState = document.getElementById("emptyState")
+
+        const totalCount = document.getElementById("totalCount")
+        const interviewCount = document.getElementById("interviewCount")
+        const rejectedCount = document.getElementById("rejectedCount")
+        const tabCount = document.getElementById("tabCount")
+
+        let currentTab = "all"
+
+
+        // DEFAULT STATUS SET
+        for (let i = 0; i < cards.length; i++) {
+            cards[i].dataset.status = "all"
+        }
+
+
+        // UPDATE DASHBOARD COUNT
+        function updateCounts() {
+
+            const allCards = document.querySelectorAll(".job-card")
+
+            let interviewNum = 0
+            let rejectedNum = 0
+
+            for (let i = 0; i < allCards.length; i++) {
+                if (allCards[i].dataset.status === "interview") interviewNum++
+                    if (allCards[i].dataset.status === "rejected") rejectedNum++
+            }
+
+            totalCount.innerText = allCards.length
+            interviewCount.innerText = interviewNum
+            rejectedCount.innerText = rejectedNum
+        }
+
+
+        // AVAILABLE JOB COUNT (RIGHT SIDE)
+        function updateAvailableJobs() {
+            const allJobs = document.querySelectorAll(".job-card")
+            tabCount.innerText = allJobs.length + " jobs"
+        }
+
+
+        // FILTER TAB
+        function filterCards() {
+
+            const allCards = document.querySelectorAll(".job-card")
+            let visible = 0
+
+            for (let i = 0; i < allCards.length; i++) {
+
+                if (currentTab === "all" || allCards[i].dataset.status === currentTab) {
+                    allCards[i].style.display = "block"
+                    visible++
+                } else {
+                    allCards[i].style.display = "none"
+                }
+            }
+
+            emptyState.style.display = visible === 0 ? "block" : "none"
+        }
+
+
+        // TAB CLICK
+        for (let i = 0; i < tabBtns.length; i++) {
+
+            tabBtns[i].onclick = function() {
+
+                for (let j = 0; j < tabBtns.length; j++) {
+                    tabBtns[j].classList.remove("bg-blue-500", "text-white")
+                    tabBtns[j].classList.add("bg-gray-200")
+                }
+
+                this.classList.add("bg-blue-500", "text-white")
+                this.classList.remove("bg-gray-200")
+
+                currentTab = this.innerText.toLowerCase()
+                filterCards()
+            }
+        }
+
+
+        // CARD BUTTON EVENTS
+        for (let i = 0; i < cards.length; i++) {
+
+            const card = cards[i]
+            const interviewBtn = card.querySelector(".interview")
+            const rejectBtn = card.querySelector(".reject")
+            const deleteBtn = card.querySelector(".delete")
+
+
+            // INTERVIEW
+            interviewBtn.onclick = function() {
+
+                card.dataset.status = "interview"
+
+                const label = card.querySelector(".bg-gray-200, .bg-green-200, .bg-red-200")
+                label.innerText = "INTERVIEW"
+                label.classList.remove("bg-gray-200", "bg-red-200")
+                label.classList.add("bg-green-200")
+
+                updateCounts()
+                filterCards()
+            }
+
+
+            // REJECTED
+            rejectBtn.onclick = function() {
+
+                card.dataset.status = "rejected"
+
+                const label = card.querySelector(".bg-gray-200, .bg-green-200, .bg-red-200")
+                label.innerText = "REJECTED"
+                label.classList.remove("bg-gray-200", "bg-green-200")
+                label.classList.add("bg-red-200")
+
+                updateCounts()
+                filterCards()
+            }
+
+
+            // DELETE
+            deleteBtn.onclick = function() {
+
+                card.remove()
+
+                updateCounts()
+                updateAvailableJobs() // ← right side job count minus
+                filterCards()
+            }
+
+        }
+
+
+        // INITIAL LOAD
+        updateCounts()
+        updateAvailableJobs()
+        filterCards()
+    </script>
+
+
+</body>
+
+</html>
